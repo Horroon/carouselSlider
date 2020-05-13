@@ -1,0 +1,128 @@
+body,
+#slider,
+.wrap,
+.slide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.wrap {
+  position: relative;
+}
+
+#slider {
+  margin: 0%;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grab;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide1 {
+  background-image: url("../pics/1.jpg");
+}
+
+.slide2 {
+  background-image: url("../pics/2.jpg");
+}
+.slide3 {
+  background-image: url("../pics/3.jpg");
+}
+.slide4 {
+  background-image: url("../pics/4.jpg");
+}
+.slide5 {
+  background-image: url("../pics/5.jpg");
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrow-left {
+  border-width: 30px 40px 30px 0;
+  border-color: transparent #fff transparent transparent;
+  left: 0;
+  margin-left: 30px;
+  z-index: 1;
+}
+
+#arrow-right {
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent #fff;
+  right: 0;
+  margin-right: 30px;
+}
+
+.nav {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 7px;
+  border: 1px solid rgb(161, 36, 36);
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active_dot {
+  background: #5e2424;
+}
+.active,
+.dot:hover {
+  background-color: #5e2424;
+}
